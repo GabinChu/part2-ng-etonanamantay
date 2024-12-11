@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- FONTAWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"/>
+
+    <!-- BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+
+<header class="header">
+
+    <div class="header-1">
+
+        <a href="#" class="logo"> <i class="fas fa-book"></i> YourBookLibrary </a>
+
+        <form action="" class="search-form">
+            <input type="search" name="" placeholder="search here..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <div class="icons">
+
+            <div id="search-btn" class="fas fa-search"></div>
+            <a style="font-size: 16px;" href="#home">home</a>
+            <a style="font-size: 16px;" href="#featured">featured</a>
+            <a style="font-size: 16px;" href="slider-shan/about-us.html">About Us</a>
+            <a style="font-size: 16px;" href="contactus.html">Contact Us</a>
+
+            <div class="dropdown">
+             <a style="font-size: 16px;" href="#blogs" class="dropdown-btn">Genre</a>
+                <div class="dropdown-menu">
+                <a href="books/landing.html">FANTASY</a>
+                <a href="#">HISTORICAL</a>
+                <a href="#">SLICE OF LIFE</a>
+                <a href="#">ROMANCE</a>
+                <a href="#">COMEDY</a>
+                <a href="#">SCI-FI</a>
+                <a href="#">THRILLER</a>
+            </div>
+        </div>
+            <a href="bookmark/indexx.html" class="fas fa-heart"></a>
+            
+            <div id="login-btn" class="fas fa-user"></div>
+        </div>
+    </div>
+
+   
+</header>
+
+<!-- header section ends -->
+
+<!-- bottom navbar  -->
+
+<nav class="bottom-navbar">
+    <a href="#home" class="fas fa-home"></a>
+    <a href="#featured" class="fas fa-list"></a>
+    <a href="#arrivals" class="fas fa-tags"></a>
+    <a href="#reviews" class="fas fa-comments"></a>
+    <a href="#blogs" class="fas fa-blog"></a>
+</nav>
+
+<!-- login form  -->
+
+<div class="login-form-container">
+
+    <div id="close-login-btn" class="fas fa-times"></div>
+
+     <div class="form-container active" id="sign-in-container">
+        <form class="auth-form">
+            <h2>Sign In</h2>
+            <label for="signin-username">Username:</label>
+            <input type="text" size="18" maxlength="20" placeholder="Enter Name Here" required id="signin-username"/><br>
+
+            <label for="signin-email">Email:</label>
+            <input type="email" size="18" placeholder="Enter Email Here" required id="signin-email"/><br>
+
+            <label for="signin-password">Password:</label>
+            <input type="password" size="18" maxlength="20" placeholder="Enter Password Here" required id="signin-password"/><br>
+
+            <div class="checkbox">
+                <input type="checkbox" id="signin-remember-me">
+                <label for="signin-remember-me">Remember Me</label>
+            </div>
+
+            <input type="submit" value="Sign In" class="btn">
+            <p>Forgot password? <a href="#">Click here</a></p>
+            <p>Don't have an account? <a href="#" onclick="switchForm('register')">Create one</a></p>
+        </form>
+    </div>
+
+    <div class="form-container" id="register-container">
+        <form class="auth-form">
+            <h2>Register</h2>
+            <label for="register-username">Username:</label>
+            <input type="text" size="18" maxlength="20" placeholder="Enter Name Here" required id="register-username"/><br>
+
+            <label for="register-email">Email:</label>
+            <input type="email" size="18" placeholder="Enter Email Here" required id="register-email"/><br>
+
+            <label for="register-password">Password:</label>
+            <input type="password" size="18" maxlength="20" placeholder="Enter Password Here" required id="register-password"/><br>
+
+            <label for="register-phone">Phone Number:</label>
+            <input type="text" size="18" maxlength="11" placeholder="09*********" required id="register-phone"/><br>
+
+            <label for="register-age">Age:</label>
+            <input type="number" size="18" id="register-age"><br>
+
+            <label for="register-dob">Date of Birth:</label>
+            <input type="date" size="18" id="register-dob"/><br>
+
+            <label for="time">Time to submit: </label>
+            <input type="time" size="18">
+
+            <label for="register-gender">Gender:</label>
+            <label for="register-male">Male</label>
+            <input id="register-male" name="gender" type="radio">
+            <label for="register-female">Female</label>
+            <input id="register-female" name="gender" type="radio"><br>
+            <label for="Valid ID">:VALID ID: </label>
+            <input type="file" accept="image/*" multiple>
+            <input type="submit" value="Submit">
+            <input type="reset"><br>
+
+            <p>Already have an account? <a href="#" onclick="switchForm('sign-in')">Log in here</a></p>
+        </form>
+    </div>
+
+</div>
+
+<!-- home section starts  -->
+<div class="menu-btn"></div>
+  <section class="home">
+    <video class="video-slide active" src="1.mp4" autoplay muted loop></video>
+    <video class="video-slide " src="2.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="4.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="1.mp4" autoplay muted loop></video>
+    <div class="content active">
+      <h1>Presenting<br><span>YourBookLibrary</span></h1>
+      <p>Immerse yourself in a world of limitless learning with YourBookLibrary. Whether you're a student, researcher, book lover, or curious mind, our library exists to inspire, inform, and empower. Discover an extensive collection of books curated to suit your unique interests. We are here to make knowledge accessible and foster a passion for discovery and innovation.
+       
+        <br>
+        <p>Coming Soon... <br> Get ready for an expanded collection! Soon, we’ll be adding research papers, journals, and academic resources to support your learning and professional growth. Stay tuned for even more ways to explore, discover, and achieve your goals.</p>
+    <div class="content">
+      <h1>Explore<br><span>Collections</span></h1>
+      <p>From timeless classics to the latest bestsellers, YourBookLibrary offers a rich and ever-growing catalog. Browse through fiction and non-fiction, or access a wide range of eBooks. Our thoughtfully designed leisure section makes it simple to find the perfect book to relax, unwind, and escape into new worlds of imagination.
+</p>
+    </div>
+    <div class="content">
+      <h1>Innovative<br><span>Tools</span></h1>
+      <p>With user-friendly interfaces and intuitive features, YourBookLibrary makes navigating our catalog as simple as it is efficient.</p>
+    </div>
+    <div class="content">
+      <h1>Community<br></h1>
+      <p>Your engagement is greatly valued and contributes to enhancing our platform!</p>
+    </div>
+    <div class="content">
+      <h1>COMING SOON To<br><span>YourBookLibrary</span></h1>
+      <p>Get ready for an expanded collection! Soon, we’ll be adding research papers, journals, and academic resources to support your learning and professional growth. Stay tuned for even more ways to explore, discover, and achieve your goals.</p>
+    </div>
+    <div class="media-icons">
+      <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="slider-navigation">
+      <div class="nav-btn active"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+    </div>
+  </section>
+  <script type="text/javascript">
+    const menuBtn = document.querySelector(".menu-btn");
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+    });
+
+    const sliderNav = (manual) => {
+      btns.forEach((btn) => btn.classList.remove("active"));
+      slides.forEach((slide) => slide.classList.remove("active"));
+      contents.forEach((content) => content.classList.remove("active"));
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    };
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => sliderNav(i));
+    });
+  </script>
+
+
+
+
+<!-- home section ense  -->
+
+
+<section class="featured" id="featured">
+    <h1 class="heading"> <span>Featured Books</span> </h1>
+
+    <div class="swiper featured-slider">
+      <div class="swiper-wrapper">
+        
+         <div class="swiper featured-slider">
+        <div class="swiper-wrapper">
+            <!-- Wrap each book with an anchor to make it clickable -->
+            <a  class="swiper-slide box" onclick="showPreview('book-1')">
+                <div class="image">
+                    <img src="image/1.png" alt="Book 1">
+                </div>
+                <div class="content">
+                    <h3>The Unfolding Journey</h3>
+                    <div class="price">Adventure, Fantasy</div>
+                    <span class="btn">Bookmark</span>
+                </div>
+            </a>
+
+            <a  class="swiper-slide box" onclick="showPreview('book-2')">
+                <div class="image">
+                    <img src="image/2.png" alt="Book 2">
+                </div>
+                <div class="content">
+                    <h3>Pangalan ng Libro</h3>
+                    <div class="price">Genre</div>
+                    <span class="btn">Bookmark</span>
+                </div>
+            </a>
+    
+    
+           <a  class="swiper-slide box" onclick="showPreview('book-3')">
+                <div class="image">
+                    <img src="image/3.png" alt="Book 2">
+                </div>
+                <div class="content">
+                    <h3>Pangalan ng Libro</h3>
+                    <div class="price">Genre</div>
+                    <span class="btn">Bookmark</span>
+                </div>
+            </a>
+
+           <a  class="swiper-slide box" onclick="showPreview('book-4')">
+                <div class="image">
+                    <img src="image/4.png" alt="Book 2">
+                </div>
+                <div class="content">
+                    <h3>Pangalan ng Libro</h3>
+                    <div class="price">Genre</div>
+                    <span class="btn">Bookmark</span>
+                </div>
+            </a>
+        <a  class="swiper-slide box">
+          <div class="image">
+            <img src="image/5.png" alt="Book 5">
+          </div>
+          <div class="content">
+            <h3>Another Chance of Love</h3>
+            <div class="price">Romance</div>
+            <span class="btn">Bookmark</span>
+          </div>
+        </a>
+
+
+        <a  class="swiper-slide box">
+          <div class="image">
+            <img src="image/6.png" alt="Book 6">
+          </div>
+          <div class="content">
+            <h3>No Way Out</h3>
+            <div class="price">Horror</div>
+            <span class="btn">Bookmark</span>
+          </div>
+        </a>
+
+            <a  class="swiper-slide box" onclick="showPreview('book-7')">
+                <div class="image">
+                    <img src="image/7.png" alt="Book 2">
+                </div>
+                <div class="content">
+                    <h3>Pangalan ng Libro</h3>
+                    <div class="price">Historical</div>
+                    <span class="btn">Bookmark</span>
+                </div>
+            </a>
+        <!-- Add more books here -->
+
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  
+
+<!-- featured section ends -->
+
+<div class="book-previews" style="display: none;" id="preview-container">
+    <div class="preview" id="book-1">
+        <span class="close-btn" onclick="closePreview()">×</span>
+        <div class="preview-content">
+            <div class="image">
+                <img src="image/1.png" alt="The Unfolding Journey">
+            </div>
+            <div class="details">
+                <h3>The Unfolding Journey</h3>
+                <p><strong>Genre:</strong> Adventure, Fantasy</p>
+                <p><strong>Description:</strong> The Unfolding Journey follows the story of Yvette, a young woman with a mysterious past, as she embarks on a perilous quest to uncover the truth behind her origins. With only a worn leather bag passed down through generations, she journeys through enchanted forests, treacherous mountains, and forgotten ruins, encountering mythical creatures, ancient spells, and secret societies along the way. As the path ahead unravels, Yvette must confront dark forces that seek to rewrite history and unlock the power within her to change the fate of her world. Every step she takes reveals a new chapter of her destiny, but the question remains: is she ready to face the truth that awaits?</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview" id="book-2" style="display: none;">
+        <span class="close-btn" onclick="closePreview()">×</span>
+        <div class="preview-content">
+            <div class="image">
+                <img src="image/2.png" alt="Pangalan ng Libro">
+            </div>
+            <div class="details">
+                <h3>Quantum Rift</h3>
+                <p><strong>Genre:</strong> Sci-FI</p>
+                <p><strong>Description:</strong>  is a thrilling sci-fi adventure set in a near-future where virtual reality games have evolved into fully immersive worlds. The story follows Jelian, a skilled gamer who discovers a mysterious glitch in the game "Quantum Rift"—a cutting-edge virtual world where players can explore limitless realms. This glitch gives her a unique power to manipulate both the game and reality itself, blurring the lines between the two. As Jelian dives deeper into the game, she uncovers a dark secret: the game's creators are hiding a dangerous AI that can manipulate the minds of players in the real world. With her newfound abilities, Jelian must navigate dangerous virtual landscapes, outsmart powerful enemies, and uncover the truth before the rift consumes both realities, threatening the entire world.</p>
+            </div>
+        </div>
+    </div>
+
+
+<div class="preview" id="book-3" style="display: none;">
+        <span class="close-btn" onclick="closePreview()">×</span>
+        <div class="preview-content">
+            <div class="image">
+                <img src="image/3.png" alt="Pangalan ng Libro">
+            </div>
+            <div class="details">
+                <h3>The Power of Every Peso Counts</h3>
+                <p><strong>Genre:</strong> Corruption, Ambagan</p>
+                <p><strong>Description:</strong> is a heartwarming slice-of-life story that follows the journey of a young woman navigating the complexities of life, finances, and personal growth. Struggling to make ends meet while chasing her dreams, she learns that every peso she saves, spends, and invests carries weight beyond its value. Through everyday encounters, challenges, and small victories, the protagonist discovers the true power of financial independence, self-worth, and the importance of making every moment count. As she balances her aspirations and responsibilities, this story reminds readers that no amount is too small to shape a brighter future.</p>
+            </div>
+        </div>
+    </div>
+
+<div class="preview" id="book-4" style="display: none;">
+        <span class="close-btn" onclick="closePreview()">×</span>
+        <div class="preview-content">
+            <div class="image">
+                <img src="image/4.png" alt="Pangalan ng Libro">
+            </div>
+            <div class="details">
+                <h3>Ang Twerk King ng Barangay</h3>
+                <p><strong>Genre:</strong> Comedy</p>
+                <p><strong>Description:</strong> is a hilarious comedy about a young, carefree boy named Esmar, who unexpectedly becomes the star of his barangay for his outrageous twerking skills. What starts as a simple dare turns into a viral sensation, earning him the title of "Twerk King." As his fame grows, Esmar faces funny challenges—trying to balance school, family expectations, and his newfound stardom. Along the way, he learns that while money, fame, and attention can be entertaining, true success comes from staying grounded and true to oneself. Packed with laugh-out-loud moments and light-hearted lessons, the story is a quirky mix of dance, humor, and heart.</p>
+            </div>
+        </div>
+    </div>
+
+<div class="preview" id="book-7" style="display: none;">
+        <span class="close-btn" onclick="closePreview()">×</span>
+        <div class="preview-content">
+            <div class="image">
+                <img src="image/7.png" alt="Pangalan ng Libro">
+            </div>
+            <div class="details">
+                <h3>The Last Monarch's Secret </h3>
+                <p><strong>Genre:</strong>Historical</p>
+                <p><strong>Description:</strong> follows the story of Seyah, a young girl living in a small, forgotten village that once thrived under a powerful monarchy. One day, while cleaning her late grandmother’s attic, Seyah stumbles upon a hidden drawer in an old wooden chest. Inside, she finds a centuries-old journal and a strange, ornate key with a mysterious inscription. As she begins to decode the journal’s cryptic entries, she uncovers long-lost secrets about the kingdom's fall and the royal family’s hidden treasures. Seyah’s discovery leads her on a perilous journey, uncovering truths about her own lineage and the powerful forces still guarding the monarch’s most guarded secret. The key she found might be the only thing capable of unlocking the long-forgotten fate of the last monarch—and possibly restoring her kingdom to its rightful place.</p>
+            </div>
+        </div>
+    </div>
+</div>>
+</div>
+
+
+<!-- arrivals section starts  -->
+
+<section class="arrivals" id="arrivals">
+
+    <h1 class="heading"> <span>new arrivals</span> </h1>
+
+    <div class="swiper arrivals-slider">
+
+        <div class="swiper-wrapper">
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="image/1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>The Power of Every Money Counts</h3>
+                    <div class="genre">Corruption <span>Ambagan</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="image/2.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Quantum Rift: The Escape</h3>
+                    <div class="genre">Romance <span>Drama</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="image/3.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>The Power of Every Money Counts</h3>
+                    <div class="genre">Corruption<span>Ambagan</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="image/4.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Ang Twerk King ng Baranggay</h3>
+                    <div class="genre">Comedy <span>Adventure</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="image/5.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Another Chance For Love</h3>
+                    <div class="genre">Romance <span>Non-Fiction</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="swiper arrivals-slider">
+
+        <div class="swiper-wrapper">
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="image/6.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>No Way Out</h3>
+                    <div class="genre">Horror <span>Suspense</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="image/7.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>The Last Monarch's Secret</h3>
+                    <div class="genre">Crime <span>Investigation</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- arrivals section ends -->
+
+
+
+
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>YourBookLibrary</h3>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Terms of Service </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Vision </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Partner </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> Blog </a>
+        </div>
+
+        <div class="box">
+            <h3>Discover</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Home </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Books </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Authors </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Subject </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Collections </a>
+        </div>
+
+        <div class="box">
+            <h3>Languages</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Filipino </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Cebuano </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Bisaya </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> English </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Claynese </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +63 0000000000 </a>
+            <a href="#"> <i class="fas fa-phone"></i> +63 0000000000 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> YourBookLibrary@gmail.com </a>
+            <img src="image/hehe.png" class="map" alt="">
+        </div>
+        
+        
+    </div>
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+
+
+
+</section>
+
+<!-- footer section ends -->
+
+<!-- loader  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
